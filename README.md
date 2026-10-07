@@ -110,16 +110,15 @@ dsh plugin add @kkzyt/dsh-minami-kotori-theme
 
 ## 源码与打包
 
-`main-v2.js` 是 Host 入口；`client-v2.js` 是可直接运行的组合 Client 入口。
-`client.js` 保留主题部分源码，内置图片使用 data URL，因此体积较大。
+`main.js` 是 Host 入口；`client.js` 是可直接运行的组合 Client 入口。
 `vendor/` 为经过修改的上游宠物引擎，`assets/minami-kotori-hug/` 为唯一宠物资源。
 
 当前仓库包含已构建 Client，不需要访问作者机器上的原始 dsh-pet 安装目录。
-更改 `client.js` 后，需要同步修改 `client-v2.js` 的 `createKotoriTheme` 部分。
+主题与宠物 Client 逻辑统一维护在 `client.js`，不再保留历史入口。
 
 ```bash
-node --check main-v2.js
-node --check client-v2.js
+node --check main.js
+node --check client.js
 npm pack --ignore-scripts
 ```
 
@@ -134,8 +133,8 @@ GitHub 上传不会自动发布 npm。需要持有 npm 的 `kkzyt` 用户名或�
 ```bash
 npm login --registry=https://registry.npmjs.org/
 npm whoami --registry=https://registry.npmjs.org/
-node --check main-v2.js
-node --check client-v2.js
+node --check main.js
+node --check client.js
 npm pack --dry-run
 npm publish --access public --registry=https://registry.npmjs.org/
 npm view @kkzyt/dsh-minami-kotori-theme version --registry=https://registry.npmjs.org/

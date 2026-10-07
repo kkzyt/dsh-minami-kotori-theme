@@ -2,7 +2,7 @@
 
 ## Pet engine
 
-The vendored `vendor/pet-engine.js`, `vendor/state-NvDEoCln.js`, and the pet-engine portion of `client-v2.js` are derived from `@linxin666/dsh-pet` version 0.4.5, by linxin666 and upstream contributors, licensed under Apache License 2.0. The complete license is included as `LICENSE.pet-engine`.
+The vendored `vendor/pet-engine.js`, `vendor/state-NvDEoCln.js`, and the pet-engine portion of `client.js` are derived from `@linxin666/dsh-pet` version 0.4.5, by linxin666 and upstream contributors, licensed under Apache License 2.0. The complete license is included as `LICENSE.pet-engine`.
 
 Modifications made for minami-kotori-theme:
 - Host and Client now share the theme entry and settings namespace.

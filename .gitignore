@@ -1,9 +1,0 @@
-node_modules/
-*.tgz
-*.zip
-*.bak
-*.log
-.env
-.env.*
-.npm*/
-.DS_Store

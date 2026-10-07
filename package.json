@@ -8,16 +8,15 @@
   "type": "module",
   "description": "minami-kotori-theme：南小鸟壁纸、液态玻璃、Love Live! Logo、徽章图标及内置南小鸟抱抱宠物，无需另装 dsh-pet。",
   "exports": {
-    ".": "./main-v2.js",
-    "./client": "./client-v2.js"
+    ".": "./main.js",
+    "./client": "./client.js"
   },
   "files": [
-    "main-v2.js",
-    "client-v2.js",
+    "main.js",
+    "client.js",
     "vendor",
     "assets",
     "cordis.patch.yml",
-    "wallpaper.webp",
     "LICENSE.pet-engine",
     "THIRD-PARTY-NOTICES.md",
     "README.md"
