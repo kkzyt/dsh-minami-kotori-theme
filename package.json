@@ -1,0 +1,51 @@
+{
+  "name": "@kkzyt/dsh-minami-kotori-theme",
+  "version": "1.0.0",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "type": "module",
+  "description": "minami-kotori-theme：南小鸟壁纸、液态玻璃、Love Live! Logo、徽章图标及内置南小鸟抱抱宠物，无需另装 dsh-pet。",
+  "exports": {
+    ".": "./main-v2.js",
+    "./client": "./client-v2.js"
+  },
+  "files": [
+    "main-v2.js",
+    "client-v2.js",
+    "vendor",
+    "assets",
+    "cordis.patch.yml",
+    "wallpaper.webp",
+    "LICENSE.pet-engine",
+    "THIRD-PARTY-NOTICES.md",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-theme",
+        "@deepseek-ai/dsh-client-ui-core",
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-api-session-controller",
+        "@deepseek-ai/dsh-client-ui-workspace"
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kkzyt/dsh-minami-kotori-theme.git"
+  },
+  "homepage": "https://github.com/kkzyt/dsh-minami-kotori-theme#readme",
+  "bugs": {
+    "url": "https://github.com/kkzyt/dsh-minami-kotori-theme/issues"
+  }
+}

@@ -1,0 +1,12 @@
+- insert:
+    - id: minami-kotori-theme
+      name: '@kkzyt/dsh-minami-kotori-theme'
+      config:
+        enabled: true
+        visible: true
+        decorationEnabled: false
+        petId: minami-kotori-hug
+        size: 200
+        right: 32
+        bottom: 28
+        bubbleScale: 1

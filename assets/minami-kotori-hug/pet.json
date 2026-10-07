@@ -1,0 +1,317 @@
+{
+  "petManifestVersion": 2,
+  "id": "minami-kotori-hug",
+  "displayName": "南小鸟(抱抱)",
+  "description": "按用户玩偶照片还原的坐姿宠物；轻量呼吸、摇晃和弹跳动画。",
+  "version": "1.5.10",
+  "author": "用户定制",
+  "license": "Personal use only; fan art based on user-provided plush photo; original character rights belong to their respective owners.",
+  "renderer": "frames2d",
+  "frames2d": {
+    "dir": "frames",
+    "defaultFrameMs": 100,
+    "tracks": {
+      "idle": {
+        "frames": [
+          "000.png",
+          "001.png",
+          "002.png",
+          "003.png",
+          "004.png",
+          "005.png",
+          "006.png",
+          "007.png",
+          "008.png",
+          "009.png",
+          "010.png",
+          "011.png",
+          "012.png",
+          "013.png",
+          "014.png",
+          "015.png",
+          "016.png",
+          "017.png",
+          "018.png",
+          "019.png",
+          "020.png",
+          "021.png",
+          "022.png",
+          "023.png",
+          "024.png",
+          "025.png",
+          "026.png",
+          "027.png",
+          "028.png",
+          "029.png",
+          "030.png",
+          "031.png",
+          "032.png",
+          "033.png",
+          "034.png",
+          "035.png",
+          "036.png",
+          "037.png",
+          "038.png",
+          "039.png"
+        ],
+        "loop": true
+      },
+      "sway": {
+        "frames": [
+          "000.png",
+          "001.png",
+          "002.png",
+          "003.png",
+          "004.png",
+          "005.png",
+          "006.png",
+          "007.png",
+          "008.png",
+          "009.png",
+          "010.png",
+          "011.png"
+        ],
+        "loop": true
+      },
+      "happy": {
+        "frames": [
+          "000.png",
+          "001.png",
+          "002.png",
+          "003.png",
+          "004.png",
+          "005.png",
+          "006.png",
+          "007.png",
+          "008.png",
+          "009.png",
+          "010.png",
+          "011.png",
+          "012.png",
+          "013.png",
+          "014.png",
+          "015.png",
+          "016.png",
+          "017.png",
+          "018.png",
+          "019.png"
+        ],
+        "loop": true
+      },
+      "sad": {
+        "frames": [
+          "000.png",
+          "001.png",
+          "002.png",
+          "003.png",
+          "004.png",
+          "005.png",
+          "006.png",
+          "007.png",
+          "008.png",
+          "009.png",
+          "010.png",
+          "011.png"
+        ],
+        "loop": true
+      },
+      "pet-smile": {
+        "frames": [
+          "000.png",
+          "001.png",
+          "002.png",
+          "003.png",
+          "004.png",
+          "005.png",
+          "006.png",
+          "007.png",
+          "008.png",
+          "009.png",
+          "010.png",
+          "011.png",
+          "012.png",
+          "013.png",
+          "014.png",
+          "015.png",
+          "016.png",
+          "017.png",
+          "018.png",
+          "019.png"
+        ],
+        "loop": true
+      },
+      "clap": {
+        "frames": [
+          "000.png",
+          "001.png",
+          "002.png",
+          "003.png",
+          "004.png",
+          "005.png",
+          "006.png",
+          "007.png",
+          "008.png",
+          "009.png",
+          "010.png",
+          "011.png"
+        ],
+        "loop": true
+      },
+      "ponytail": {
+        "frames": [
+          "000.png",
+          "001.png",
+          "002.png",
+          "003.png",
+          "004.png",
+          "005.png",
+          "006.png",
+          "007.png",
+          "008.png",
+          "009.png",
+          "010.png",
+          "011.png",
+          "012.png",
+          "013.png",
+          "014.png",
+          "015.png",
+          "016.png",
+          "017.png",
+          "018.png",
+          "019.png",
+          "020.png",
+          "021.png",
+          "022.png",
+          "023.png"
+        ],
+        "loop": true
+      },
+      "kick": {
+        "frames": [
+          "000.png",
+          "001.png",
+          "002.png",
+          "003.png",
+          "004.png",
+          "005.png",
+          "006.png",
+          "007.png",
+          "008.png",
+          "009.png",
+          "010.png",
+          "011.png",
+          "012.png",
+          "013.png",
+          "014.png",
+          "015.png",
+          "016.png",
+          "017.png",
+          "018.png",
+          "019.png",
+          "020.png",
+          "021.png",
+          "022.png",
+          "023.png"
+        ],
+        "loop": true
+      },
+      "eat-macaron": {
+        "frames": [
+          "000.png",
+          "001.png",
+          "002.png",
+          "003.png",
+          "004.png",
+          "005.png",
+          "006.png",
+          "007.png",
+          "008.png",
+          "009.png",
+          "010.png",
+          "011.png",
+          "012.png",
+          "013.png",
+          "014.png",
+          "015.png",
+          "016.png",
+          "017.png",
+          "018.png",
+          "019.png",
+          "020.png",
+          "021.png",
+          "022.png",
+          "023.png"
+        ],
+        "loop": true
+      }
+    },
+    "phases": {
+      "idle": "idle",
+      "waiting": "ponytail",
+      "thinking": "sway",
+      "tool": "sway",
+      "review": "sway",
+      "done": "happy",
+      "failed": "sad"
+    }
+  },
+  "remarks": {
+    "pet": [
+      "诶嘿嘿……被摸摸头，有点害羞呢♪",
+      "可以再陪小鸟一会儿吗？",
+      "抱抱～今天也一起加油吧♪"
+    ],
+    "feed": [
+      "哇，是马卡龙！谢谢你，小鸟好开心♪",
+      "甜甜的马卡龙……要不要一起吃呀？"
+    ],
+    "petCooldown": [
+      "诶嘿嘿，先让小鸟缓一缓嘛～"
+    ],
+    "feedCooldown": [
+      "小鸟还在慢慢品尝呢，等一下下♪"
+    ],
+    "noTreats": [
+      "马卡龙吃完了呢……没关系，陪着小鸟就好♪"
+    ]
+  },
+  "gameplay": {
+    "touch": {
+      "zones": [
+        {
+          "name": "head",
+          "y0": 0,
+          "y1": 0.7,
+          "branches": [
+            {
+              "probability": 1,
+              "state": "pet-smile",
+              "stateMs": 2400,
+              "phrases": [
+                "诶嘿嘿……好温暖呀♪",
+                "这样摸摸头，小鸟会害羞的啦～",
+                "可以再摸一下吗？就一下♪"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "hands",
+          "y0": 0.7,
+          "y1": 0.88,
+          "branches": [
+            {
+              "probability": 1,
+              "state": "clap",
+              "stateMs": 2400,
+              "phrases": [
+                "拍拍手♪ 一起加油吧～",
+                "诶嘿嘿，和小鸟一起拍拍手吧♪"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
