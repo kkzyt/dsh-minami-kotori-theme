@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "publishConfig": {
     "access": "public",
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://npm.pkg.github.com"
   },
   "type": "module",
   "description": "minami-kotori-theme：南小鸟壁纸、液态玻璃、Love Live! Logo、徽章图标及内置南小鸟抱抱宠物，无需另装 dsh-pet。",

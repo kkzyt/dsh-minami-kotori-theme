@@ -2,7 +2,17 @@
 
 DeepSeek Harness Web 的南小鸟主题，内置 **南小鸟抱抱** 桌面宠物。无需另装 dsh-pet。
 
-## 1.0.0 版本
+## v1.0.1 版本
+
+本版本通过 **GitHub Packages** 分发：
+
+- 包名：`@kkzyt/dsh-minami-kotori-theme`
+- 版本：`1.0.1`
+- Registry：`https://npm.pkg.github.com`
+- [GitHub Packages 页面](https://github.com/kkzyt/dsh-minami-kotori-theme/pkgs/npm/dsh-minami-kotori-theme)
+- [源码仓库](https://github.com/kkzyt/dsh-minami-kotori-theme)
+
+新增「冬季私服」，修正白色鞋面、圆头缝线与金色蝴蝶结；修复点击互动时切回默认制服的问题。换装基于原始默认制服的 188 帧、9 组动画，保留原玩偶脸部、姿势、帧序与时长。保留原有服装、持久化好感度，以及「一起专注」25 / 45 分钟计时功能。
 
 本次发行整合当前主题与南小鸟抱抱功能：
 
@@ -51,30 +61,68 @@ DeepSeek Harness Web 的南小鸟主题，内置 **南小鸟抱抱** 桌面宠�
 
 浏览器通知默认关闭：在 **设置 → 南小鸟主题** 勾选「启用任务完成浏览器通知」，允许浏览器权限后保存。与铃声独立；页面需保持打开（后台标签页也可）。通知权限取决于浏览器和系统，仅支持安全上下文（HTTPS 或本机 localhost）；拒绝后需在网站设置中重新允许。通知不包含会话内容，点击通知会聚焦当前 DSH 窗口。
 
-## 按 npm 包名安装
+## 从 GitHub Packages 安装
 
-插件包名：`@kkzyt/dsh-minami-kotori-theme`。
+GitHub Packages 是独立于 npmjs.org 的 npm registry。本插件使用 `https://npm.pkg.github.com`，请明确指定来源。
 
-**本源码已准备为 npm 发布格式，不代表已经发布到 npm。维护者完成下方发布步骤后，才能按包名安装。**
+### 1. 在运行 DSH 的机器上配置认证
 
-发布后可在 DSH 插件安装页面填写上述包名，或请求助手：
+使用 GitHub **Personal access token（classic）**，安装所需权限为 `read:packages`。账号也须有该包的读取权限。GitHub npm Packages 的公开包同样需要认证。
 
-> 请使用 plugin_manager 安装 @kkzyt/dsh-minami-kotori-theme；先停用独立 dsh-pet 和旧的 @local/minami-kotori-theme，避免重复配置及服务冲突。
+在与 DSH 相同的系统用户下执行以下单行命令（PowerShell、macOS / Linux 均可）：
 
-对应参数：
+```text
+npm login --scope=@kkzyt --auth-type=legacy --registry=https://npm.pkg.github.com
+```
+
+- Username：你的 GitHub 用户名。
+- Password：GitHub classic Token，而非账号密码。
+- 如果提示 Email，填写账号邮箱。
+
+不要提交包含 Token 的配置文件，也不要把 Token 粘贴到聊天、截图或公开日志中。远程部署时应在服务器配置认证；浏览器所在电脑的登录不会自动传到服务器。
+
+### 2. 在「添加插件」窗口填写
+
+先完成上一步 GitHub Packages 登录，再打开 DSH 的「添加插件」窗口。
+
+| 界面位置 | 填写内容 / 操作 |
+| --- | --- |
+| 顶部「输入插件的包名、GitHub 仓库地址或本地目录路径」输入框 | `@kkzyt/dsh-minami-kotori-theme@1.0.1` |
+| 「安装源」下拉菜单 | 选择「自定义地址」 |
+| 「自定义地址」输入框 | `https://npm.pkg.github.com` |
+| 完成填写后 | 收起安装源菜单，点击安装按钮，按提示启用插件 |
+
+**不要把 GitHub Packages 的网页链接填进安装源。** 包页面用于浏览，安装源需要填写 registry 地址 `https://npm.pkg.github.com`，不是 `https://github.com/kkzyt/dsh-minami-kotori-theme/pkgs/npm/dsh-minami-kotori-theme`。
+
+本包在 GitHub Packages 发布，安装时请选择「自定义地址」，而非「npm 官方源」或「中国大陆镜像源」。Token 不填在这两个输入框中；认证由运行 DSH 的系统用户的 npm 配置提供。可以在该用户终端执行前面的 `npm login`；Windows 的用户配置通常位于 `%USERPROFILE%\.npmrc`，macOS / Linux 通常位于 `~/.npmrc`。若 DSH 运行在 Docker 或远程服务器，认证应配置在对应运行环境。
+
+安装器若提示 `restart-required`，重启 DSH，再刷新网页。从旧本地包迁移时，先停用旧的 `@local/minami-kotori-theme` 或独立 `dsh-pet`，避免重复宠物和服务冲突。
+
+### 3. 也可以请求 DSH 助手安装
+
+在 DSH 中请求助手：
+
+> 从 https://npm.pkg.github.com 安装并启用 @kkzyt/dsh-minami-kotori-theme@1.0.1。若存在旧的 @local/minami-kotori-theme 或独立 dsh-pet，请先检查并停用冲突项。
+
+对应工具参数：
 
 ```json
-{"action":"install_bundle","target":"@kkzyt/dsh-minami-kotori-theme"}
+{
+  "action": "install_bundle",
+  "target": "@kkzyt/dsh-minami-kotori-theme@1.0.1",
+  "registry": "https://npm.pkg.github.com"
+}
 ```
 
-如果你的 DSH CLI 支持 `plugin add` 子命令（可先查看 `dsh plugin --help`），可以使用：
+若返回 `restart-required`，重启 DSH，并刷新现有 Web 页面。`npm install` 只安装依赖，不保证注册、启用 Cordis bundle，请使用 DSH 插件管理。
 
-```bash
-dsh plugin add @kkzyt/dsh-minami-kotori-theme
+### 4. 验证包是否可读取
+
+```text
+npm view @kkzyt/dsh-minami-kotori-theme@1.0.1 version --registry=https://npm.pkg.github.com
 ```
 
-`pnpm add` 仅安装依赖，不保证注册和启用 DSH bundle，优先使用 DSH 插件管理。
-从旧本地包迁移时应先停用旧包，再安装新包；宠物存档位置不变。
+返回 `1.0.1` 表示当前账号可读取该版本。遇到 401 / 403，请检查 Token 类型、有效期、`read:packages` 和包读取权限；遇到 404，请检查包名、版本、账号权限及 registry。
 
 ## 从 GitHub Release 安装
 
@@ -83,14 +131,14 @@ dsh plugin add @kkzyt/dsh-minami-kotori-theme
 3. 如果安装了独立 `@linxin666/dsh-pet`，先在插件管理中停用它，避免 `pet` 服务和 `/api/pet/*` 路由冲突。其他覆盖相同品牌位置的主题也应先停用。
 4. 在 DSH 中请求助手安装：
 
-   > 请使用 plugin_manager 安装 `/绝对路径/kkzyt-dsh-minami-kotori-theme-1.0.0.tgz`，按安装器要求重启。
+   > 请使用 plugin_manager 安装 `/绝对路径/kkzyt-dsh-minami-kotori-theme-1.0.1.tgz`，按安装器要求重启。
 
    对应工具参数：
 
    ```json
    {
      "action": "install_bundle",
-     "target": "/绝对路径/kkzyt-dsh-minami-kotori-theme-1.0.0.tgz"
+     "target": "/绝对路径/kkzyt-dsh-minami-kotori-theme-1.0.1.tgz"
    }
    ```
 
@@ -122,28 +170,31 @@ node --check client.js
 npm pack --ignore-scripts
 ```
 
-把生成的 `.tgz` 上传到 GitHub Release，标签为 `v1.0.0`。
+把生成的 `.tgz` 上传到 GitHub Release，标签为 `v1.0.1`。
 
-## 维护者发布到 npm
+## 维护者发布到 GitHub Packages
 
-GitHub 上传不会自动发布 npm。需要持有 npm 的 `kkzyt` 用户名或组织 scope 的发布权限；GitHub 用户名与 npm 用户名不是自动关联的。如果没有该 scope 权限，应先统一改成你自己的 npm scope。
+在源码根目录执行。发布账号需拥有 `@kkzyt` 的发布权限，GitHub classic Token 需要 `write:packages`（通常同时配置 `read:packages`）。
 
-在本仓库根目录执行：
-
-```bash
-npm login --registry=https://registry.npmjs.org/
-npm whoami --registry=https://registry.npmjs.org/
+```text
+npm pkg set publishConfig.registry=https://npm.pkg.github.com
+npm login --scope=@kkzyt --auth-type=legacy --registry=https://npm.pkg.github.com
 node --check main.js
 node --check client.js
 npm pack --dry-run
-npm publish --access public --registry=https://registry.npmjs.org/
-npm view @kkzyt/dsh-minami-kotori-theme version --registry=https://registry.npmjs.org/
+npm publish --registry=https://npm.pkg.github.com
+npm view @kkzyt/dsh-minami-kotori-theme@1.0.1 version --registry=https://npm.pkg.github.com
 ```
 
-按 npm 提示完成浏览器登录和安全验证，不要将密码、验证码或 Token 写入仓库。
-同一包名的同一版本不能重复发布；后续更新提高 `package.json` 的版本号。
-`publishConfig` 已设为公开发布到官方 npm registry，保留了原有 DSH bundle 配置和入口。
-源码修改与本地检查不等同于已发布成功，以上最后一条命令能返回目标版本才代表 registry 可访问。
+`package.json` 中的 `publishConfig.registry` 应指向 GitHub Packages，而非 npmjs.org；包名保持 `@kkzyt/dsh-minami-kotori-theme`，`repository` 指向本 GitHub 仓库。版本号写成 `1.0.1`，Git 标签可写成 `v1.0.1`。
+
+首次发布默认可见性为 private。如需公开，在包页面的 Package settings 中将可见性调整为 Public；公开 npm 包的下载仍需 GitHub Packages 认证。同一个 registry 中同一包名和版本不能重复发布，后续更新请递增版本。
+
+GitHub 源码 push、Release 附件上传与 Packages 发布是三个独立操作。只修改 README 不会改变已经发布的安装包；README 修改后可直接提交源码仓库，若希望发布包内也包含新版 README，请发布新版本。
+
+PowerShell 的换行符是反引号，不是反斜杠；上面使用单行命令以便直接复制。
+
+参考：[GitHub 官方 npm registry 文档](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry)。
 
 ## 许可与第三方素材
 
