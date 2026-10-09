@@ -22,6 +22,10 @@ export function apply(ctx, config = {}) {
       ['kotori-thinking.gif', 'image/gif'],
       ['kotori-new-session.png', 'image/png'],
       ['kotori-settings-icon.webp', 'image/webp'],
+      ['kotori-brand-logo.png', 'image/png'],
+      ['kotori-brand-mark.png', 'image/png'],
+      ['kotori-hero-printemps.png', 'image/png'],
+      ['kotori-birthday.jpg', 'image/jpeg'],
     ].map(([filename, type]) => ctx.webServer.register({
       kind: 'exact',
       path: `/kotori-theme/assets/${filename}`,
